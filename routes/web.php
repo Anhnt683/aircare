@@ -20,3 +20,5 @@ Route::get('/', function () {
 
 Route::resource('home', HomeController::class);
 Route::resource('thongbao', \App\Http\Controllers\TableThongbaoController::class);
+
+Route::post('thongbao', [\App\Http\Controllers\TableThongbaoController::class, 'addThongBao'])->name('add-thong-bao');
